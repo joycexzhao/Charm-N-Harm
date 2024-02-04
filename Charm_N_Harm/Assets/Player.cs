@@ -6,9 +6,11 @@ public class Player : MonoBehaviour
 {
 
     public float speed = 5f;
+    public float dash = 20f;
 
     private Rigidbody2D rb;
     private Vector2 move;
+    
 
     // Start is called before the first frame update
     void Start()
