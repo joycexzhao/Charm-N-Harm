@@ -11,19 +11,38 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI healthDisplay;
 
     private Rigidbody2D rb;
+    private Vector2 pointerInput;
     private Vector2 move;
     private Coroutine damageCoroutine;
+
+    private WeaponParent weaponParent;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         UpdateHealthDisplay();
+        weaponParent = GetComponentInChildren<WeaponParent>();
     }
 
     void Update()
     {
         move.x = Input.GetAxisRaw("Horizontal");
         move.y = Input.GetAxisRaw("Vertical");
+
+        pointerInput = GetPointerInput();
+        weaponParent.PointerPosition = pointerInput;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            weaponParent.Attack();
+        }
+    }
+
+    private Vector2 GetPointerInput()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane;
+        return Camera.main.ScreenToWorldPoint(mousePos);
     }
 
     void FixedUpdate()
