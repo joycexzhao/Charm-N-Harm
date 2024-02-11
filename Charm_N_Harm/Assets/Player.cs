@@ -25,10 +25,9 @@ public class Player : MonoBehaviour
         healthBarSlider.maxValue = health;
         healthBarSlider.value = health;
         healthFillImage = healthBarSlider.fillRect.GetComponent<UnityEngine.UI.Image>();
-        UpdateHealthDisplay(); // Call this if you want to keep text-based health display
-        UpdateHealthBarColor(); // Update color based on initial health
+        UpdateHealthDisplay();
+        UpdateHealthBarColor();
     }
-
 
     void Update()
     {
@@ -80,11 +79,11 @@ public class Player : MonoBehaviour
     {
         while (true)
         {
-            health -= 10f;
-            Mathf.Clamp(health, 0, healthBarSlider.maxValue); // Ensure health doesn't go below 0
-            healthBarSlider.value = health; // Update the slider value
-            UpdateHealthBarColor(); // Update the health bar color based on the current health
-            damageFlash.Flash(); // Trigger the flash effect
+            health = Mathf.Clamp(health - 10f, 0, healthBarSlider.maxValue);
+            healthBarSlider.value = health;
+            UpdateHealthBarColor();
+            UpdateHealthDisplay();
+            damageFlash.Flash();
 
             if (health <= 0)
             {
@@ -96,11 +95,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    
     void UpdateHealthDisplay()
     {
-        healthDisplay.text = "Health: " + health;
+        healthDisplay.text = "Health: " + Mathf.RoundToInt(health).ToString();
     }
+
     void UpdateHealthBarColor()
     {
         float healthPercent = health / healthBarSlider.maxValue;
@@ -118,5 +117,4 @@ public class Player : MonoBehaviour
             healthFillImage.color = Color.red;
         }
     }
-
 }
