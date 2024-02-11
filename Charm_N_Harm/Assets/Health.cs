@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -39,9 +37,13 @@ public class Health : MonoBehaviour
         }
         else
         {
-            OnDeathWithReference?.Invoke(sender);
-            isDead = true;
-            Destroy(gameObject);
+            if (!isDead)
+            {
+                OnDeathWithReference?.Invoke(sender);
+                isDead = true;
+                // Notify the Enemy script instead of destroying the GameObject
+                GetComponent<Enemy>().SetToIdle();
+            }
         }
     }
 }
