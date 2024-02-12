@@ -9486,6 +9486,104 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashDuration: 0.5
+--- !u!1001 &819059837758236488
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 904179226718541317, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: rock
+      value: 
+      objectReference: {fileID: 3104060963114782001, guid: 4e2162cd1a12a40db84a3185a3a026f6, type: 3}
+    - target: {fileID: 904179226718541317, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1966800508}
+    - target: {fileID: 3223691612580278034, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_Name
+      value: Long Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223691612580278034, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074172592009360183, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.714
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074172592009360183, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.805
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074172592009360183, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074172592009360183, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074172592009360183, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074172592009360183, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074172592009360183, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074172592009360183, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074172592009360183, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074172592009360183, guid: b116267c201d5413898454b54dec946d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3223691612580278034, guid: b116267c201d5413898454b54dec946d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2055102313562889952}
+  m_SourcePrefab: {fileID: 100100000, guid: b116267c201d5413898454b54dec946d, type: 3}
+--- !u!1 &2055102313562889944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3223691612580278034, guid: b116267c201d5413898454b54dec946d, type: 3}
+  m_PrefabInstance: {fileID: 819059837758236488}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2055102313562889952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055102313562889944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb24d972ed88544588302ad296d2ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 10
+  maxHealth: 10
+  OnHitWithReference:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeathWithReference:
+    m_PersistentCalls:
+      m_Calls: []
+  isDead: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -9497,3 +9595,4 @@ SceneRoots:
   - {fileID: 1531734064}
   - {fileID: 510785874}
   - {fileID: 1572676551}
+  - {fileID: 819059837758236488}
