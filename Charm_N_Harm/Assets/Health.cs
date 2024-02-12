@@ -39,10 +39,28 @@ public class Health : MonoBehaviour
         {
             if (!isDead)
             {
-                OnDeathWithReference?.Invoke(sender);
-                isDead = true;
-                // Notify the Enemy script instead of destroying the GameObject
-                GetComponent<Enemy>().SetToIdle();
+                //OnDeathWithReference?.Invoke(sender);
+                //isDead = true;
+                //// Notify the Enemy script instead of destroying the GameObject
+                //GetComponent<Enemy>().SetToIdle();
+
+                // Attempt to get the Enemy component
+                var enemyComponent = GetComponent<Enemy>();
+                if (enemyComponent != null)
+                {
+                    // This will now set the enemy to dead instead of idle
+                    enemyComponent.SetToIdle(); // Assuming SetToDead() is a method you have or will implement
+                }
+                else
+                {
+                    // Attempt to get the Long_Enemy component
+                    var longEnemyComponent = GetComponent<Long_Enemy>();
+                    if (longEnemyComponent != null)
+                    {
+                        // Assuming Long_Enemy also has a SetToDead method or similar mechanism
+                        longEnemyComponent.SetToIdle();
+                    }
+                }
             }
         }
     }

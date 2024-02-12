@@ -57,9 +57,22 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && !collision.gameObject.GetComponent<Enemy>().IsIdle)
+        //if (collision.gameObject.CompareTag("Enemy") && !collision.gameObject.GetComponent<Enemy>().IsIdle)
+        //{
+        //    if (damageCoroutine == null)
+        //    {
+        //        damageCoroutine = StartCoroutine(DamageOverTime());
+        //    }
+        //}
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            if (damageCoroutine == null)
+            var enemy = collision.gameObject.GetComponent<Enemy>();
+            var rock = collision.gameObject.GetComponent<Rock>();
+            var longEnemy = collision.gameObject.GetComponent<Long_Enemy>();
+
+            bool shouldStartDamageCoroutine = (enemy != null && !enemy.IsIdle) || (rock != null && longEnemy == null);
+
+            if (shouldStartDamageCoroutine && damageCoroutine == null)
             {
                 damageCoroutine = StartCoroutine(DamageOverTime());
             }
