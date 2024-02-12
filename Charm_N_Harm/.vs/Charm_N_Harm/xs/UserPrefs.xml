@@ -1,33 +1,17 @@
 ﻿<Properties StartupConfiguration="{14CA2E95-001F-D988-7F3B-333A7A3C5D0E}|">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Player.cs">
-    <Files>
-      <File FileName="Assets/Enemy.cs" Line="88" Column="63" IsPinned="True" />
-      <File FileName="Assets/Enemy.cs" Line="88" Column="63" IsPinned="True" />
-      <File FileName="Assets/Health.cs" Line="50" Column="1" />
-      <File FileName="Assets/Player.cs" Line="99" Column="5" />
-      <File FileName="Assets/DamageFlash.cs" Line="3" Column="26" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Charm_N_Harm" expanded="True" selected="True" />
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Unity" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bc52014e-c632-49b0-a71d-54a5efceeaf1" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Player.cs">
+    <Files>
+      <File FileName="Assets/Enemy.cs" Line="88" Column="63" IsPinned="True" />
+      <File FileName="Assets/Health.cs" />
+      <File FileName="Assets/Player.cs" Line="56" Column="1" />
+      <File FileName="Assets/DamageFlash.cs" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="08d9ceb5-0865-4bc8-89bd-0bdfbef18c5b" />
 </Properties>

@@ -20,7 +20,13 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-      
+        weaponParent = GetComponentInChildren<WeaponParent>();
+
+        healthBarSlider.maxValue = health;
+        healthBarSlider.value = health;
+        healthFillImage = healthBarSlider.fillRect.GetComponent<UnityEngine.UI.Image>();
+        UpdateHealthDisplay();
+        UpdateHealthBarColor();
     }
 
     void Update()
@@ -29,7 +35,12 @@ public class Player : MonoBehaviour
         move.y = Input.GetAxisRaw("Vertical");
 
         pointerInput = GetPointerInput();
+        weaponParent.PointerPosition = pointerInput;
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            weaponParent.Attack();
+        }
     }
 
     private Vector2 GetPointerInput()
@@ -46,12 +57,64 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Enemy") && !collision.gameObject.GetComponent<Enemy>().IsIdle)
+        {
+            if (damageCoroutine == null)
+            {
+                damageCoroutine = StartCoroutine(DamageOverTime());
+            }
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-       
+        if (collision.gameObject.CompareTag("Enemy") && damageCoroutine != null)
+        {
+            StopCoroutine(damageCoroutine);
+            damageCoroutine = null;
+        }
     }
 
+    private IEnumerator DamageOverTime()
+    {
+        while (true)
+        {
+            health = Mathf.Clamp(health - 10f, 0, healthBarSlider.maxValue);
+            healthBarSlider.value = health;
+            UpdateHealthBarColor();
+            UpdateHealthDisplay();
+            damageFlash.Flash();
+
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                yield break;
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    void UpdateHealthDisplay()
+    {
+        healthDisplay.text = "Health: " + Mathf.RoundToInt(health).ToString();
+    }
+
+    void UpdateHealthBarColor()
+    {
+        float healthPercent = health / healthBarSlider.maxValue;
+
+        if (healthPercent > 0.7f)
+        {
+            healthFillImage.color = Color.green;
+        }
+        else if (healthPercent > 0.3f)
+        {
+            healthFillImage.color = Color.yellow;
+        }
+        else
+        {
+            healthFillImage.color = Color.red;
+        }
+    }
 }
