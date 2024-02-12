@@ -6896,6 +6896,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4594566944570660529, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5761065165009542944, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -6951,6 +6955,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5761065165009542944, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2050091445}
+    - targetCorrespondingSourceObject: {fileID: 5761065165009542944, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2050091452}
+    - targetCorrespondingSourceObject: {fileID: 5761065165009542944, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2050091453}
   m_SourcePrefab: {fileID: 100100000, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
 --- !u!1 &1572676548
 GameObject:
@@ -9273,6 +9283,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5628018141983903117, guid: 776f2a0f39fb44efea2226486425cb89, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -9392,11 +9406,109 @@ MonoBehaviour:
   maxHealth: 10
   OnHitWithReference:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2050091452}
+        m_TargetAssemblyTypeName: Knockback, Assembly-CSharp
+        m_MethodName: PlayFeedback
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2050091453}
+        m_TargetAssemblyTypeName: EnemyFlash, Assembly-CSharp
+        m_MethodName: Flash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeathWithReference:
     m_PersistentCalls:
       m_Calls: []
   isDead: 0
+--- !u!114 &2050091446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3145775415585353817, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
+  m_PrefabInstance: {fileID: 1531734064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050091438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b629c2ef0474e0ca40e2633bbeb28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &2050091448 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4594566944570660529, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
+  m_PrefabInstance: {fileID: 1531734064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2050091452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050091438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6c681147302364696968199bcd26ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 2050091448}
+  strength: 10000000
+  delay: 0.15
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2050091446}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2050091446}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &2050091453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050091438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e441ed0fb2ba4446a2a21865ea62f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.5
 --- !u!1 &2139986950
 GameObject:
   m_ObjectHideFlags: 0
