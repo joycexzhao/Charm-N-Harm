@@ -88,6 +88,11 @@ public class Enemy : MonoBehaviour
             spriteRenderer.color = new Color(.97f, 0.51f, 0.48f, 1f); // Using magenta as a stand-in for really pink
         }
 
+        //Destroy Health Bar
+        //var enemyComponent = GetComponent<Enemy>();
+        //GameObject child = enemyComponent.transform.GetChild(1).gameObject;
+        //child.transform.GetChild(0).gameObject.SetActive(false);
+
         // Optional: Add more code here to change appearance or animations
     }
 }

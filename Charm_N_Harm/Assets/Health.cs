@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -10,6 +11,14 @@ public class Health : MonoBehaviour
 
     [SerializeField]
     private bool isDead = false;
+
+    [SerializeField] 
+    private Slider slider;
+
+    public void UpdateHealthBar(float currentValue, float maxValue)
+    {   
+        slider.value = currentValue / maxValue;
+    }
 
     public void InitializeHealth(int healthValue)
     {
@@ -30,6 +39,7 @@ public class Health : MonoBehaviour
         }
 
         currentHealth -= amount;
+        UpdateHealthBar(currentHealth, maxHealth);
 
         if (currentHealth > 0)
         {
