@@ -16,10 +16,18 @@ public class Enemy : MonoBehaviour
     private bool isCollidingWithPlayer = false; // Flag for collision with player
     private bool isIdle = false; // Flag for idle state
 
+    // enemy health bar
+    private GameObject healthBar;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(ChangeDirection());
+
+        // get healthBar from hierarchy of scene
+        GameObject child = gameObject.transform.GetChild(1).gameObject;
+        healthBar = child.transform.GetChild(0).gameObject;
     }
 
     void FixedUpdate()
@@ -80,6 +88,10 @@ public class Enemy : MonoBehaviour
     {
         isIdle = true;
         rb.velocity = Vector2.zero; // Stop any movement immediately
+
+        // get rid of enemy health bar
+        Destroy(healthBar);
+
 
         // Change the enemy's color to pink
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();

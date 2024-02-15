@@ -18,6 +18,9 @@ public class Long_Enemy : MonoBehaviour
     private bool isCollidingWithPlayer = false; // Flag for collision with player
     private bool isIdle = false; // Flag for idle state
 
+    // enemy health bar
+    private GameObject healthBar;
+
     public GameObject rock;
     public float rockSpeed = 20f;
 
@@ -27,8 +30,10 @@ public class Long_Enemy : MonoBehaviour
         StartCoroutine(ChangeDirection());
 
         InvokeRepeating("FireRock", 5.0f, 5.0f);
- 
 
+        // get enemy health bar from hierarchy in scene
+        GameObject child = gameObject.transform.GetChild(1).gameObject;
+        healthBar = child.transform.GetChild(0).gameObject;
     }
 
     void FixedUpdate()
@@ -116,6 +121,9 @@ public class Long_Enemy : MonoBehaviour
     {
         isIdle = true;
         rb.velocity = Vector2.zero; // Stop any movement immediately
+
+        // get rid of enemy health bar
+        Destroy(healthBar);
 
         // Change the enemy's color to pink
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
