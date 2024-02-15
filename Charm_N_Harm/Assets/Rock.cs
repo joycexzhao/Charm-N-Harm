@@ -8,12 +8,15 @@ public class Rock : MonoBehaviour
 
     private Rigidbody2D rb;
     public Transform playerTransform;
-    public float rockSpeed = 2f;
+    public float rockSpeed;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerTransform = GameObject.FindWithTag("Player").transform;
+
+        Vector2 directionToPlayer = (playerTransform.position - transform.position).normalized;
+        rb.velocity = (directionToPlayer * rockSpeed);
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class Rock : MonoBehaviour
 
             Invoke("Die", 0.2f);
         }
+
     }
 
     void Die()
@@ -38,7 +42,6 @@ public class Rock : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 directionToPlayer = (playerTransform.position - transform.position).normalized;
-        rb.velocity = (directionToPlayer * rockSpeed);
+        
     }
 }

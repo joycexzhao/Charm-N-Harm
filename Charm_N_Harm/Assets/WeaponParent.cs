@@ -76,6 +76,11 @@ public class WeaponParent : MonoBehaviour
             {
                 health.GetHit(1, transform.parent.gameObject);
             }
+
+            if (collider.GetComponent<Rock>())
+            {
+                Destroy(collider.gameObject);
+            }
         }
     }
 

@@ -29,7 +29,7 @@ public class Long_Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(ChangeDirection());
 
-        InvokeRepeating("FireRock", 5.0f, 5.0f);
+        InvokeRepeating("FireRock", 2.0f, 2.0f);
 
         // get enemy health bar from hierarchy in scene
         GameObject child = gameObject.transform.GetChild(1).gameObject;
