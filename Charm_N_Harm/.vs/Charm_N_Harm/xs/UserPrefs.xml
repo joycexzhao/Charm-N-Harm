@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{14CA2E95-001F-D988-7F3B-333A7A3C5D0E}|">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Player.cs">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f27a522a-5edd-4fae-8f8a-9cb9fd9a59be" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Long_Enemy.cs">
     <Files>
-      <File FileName="Assets/Enemy.cs" Line="88" Column="63" IsPinned="True" />
+      <File FileName="Assets/Enemy.cs" Line="88" Column="6" IsPinned="True" />
       <File FileName="Assets/Health.cs" />
       <File FileName="Assets/Player.cs" Line="56" Column="1" />
       <File FileName="Assets/DamageFlash.cs" />
+      <File FileName="Assets/Long_Enemy.cs" Line="12" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="08d9ceb5-0865-4bc8-89bd-0bdfbef18c5b" />
 </Properties>
