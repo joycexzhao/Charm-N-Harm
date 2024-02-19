@@ -22,7 +22,7 @@ public class Door : MonoBehaviour
         // if player touches door, we enter a new room
         // I have a slight delay hard coded in for now so that it's less disorientating
         // can do animations later
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player") 
         {
             Invoke("NewRoom", 0.5f);
         }
@@ -31,7 +31,10 @@ public class Door : MonoBehaviour
     private void NewRoom()
     {
         // actually reloads the same room for now lol
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
+        // string currentSceneName = SceneManager.GetActiveScene().name;
+        // SceneManager.LoadScene(currentSceneName);
+        string[] rooms = new string[2] { "Room1", "Room2" };
+        int random = Random.Range(0, 2);
+        SceneManager.LoadScene(rooms[random]);
     }
 }
