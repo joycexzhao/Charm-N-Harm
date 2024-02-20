@@ -12,8 +12,8 @@
       <File FileName="Assets/Health.cs" />
       <File FileName="Assets/Player.cs" />
       <File FileName="Assets/DamageFlash.cs" />
-      <File FileName="Assets/Long_Enemy.cs" Line="43" Column="1" />
-      <File FileName="Assets/Door.cs" Line="38" Column="1" />
+      <File FileName="Assets/Long_Enemy.cs" />
+      <File FileName="Assets/Door.cs" Line="38" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

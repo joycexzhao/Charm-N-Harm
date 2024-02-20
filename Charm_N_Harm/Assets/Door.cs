@@ -33,8 +33,8 @@ public class Door : MonoBehaviour
         // actually reloads the same room for now lol
         // string currentSceneName = SceneManager.GetActiveScene().name;
         // SceneManager.LoadScene(currentSceneName);
-        string[] rooms = new string[2] { "Room1", "Room2" };
-        int random = Random.Range(0, 2);
+        string[] rooms = new string[3] { "Room1", "Room2", "Room3" };
+        int random = Random.Range(0, 3);
         SceneManager.LoadScene(rooms[random]);
     }
 }
