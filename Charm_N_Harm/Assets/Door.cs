@@ -34,7 +34,16 @@ public class Door : MonoBehaviour
         // string currentSceneName = SceneManager.GetActiveScene().name;
         // SceneManager.LoadScene(currentSceneName);
         string[] rooms = new string[3] { "Room1", "Room2", "Room3" };
-        int random = Random.Range(0, 3);
-        SceneManager.LoadScene(rooms[random]);
+        //int random = Random.Range(0, 3);
+        int current = 0;
+        string currentScene = SceneManager.GetActiveScene().name;
+        for (int i = 0; i < rooms.Length; i++)
+        {
+            if (currentScene == rooms[i])
+            {
+                current = i;
+            }
+        }
+        SceneManager.LoadScene(rooms[current + 1]);
     }
 }
