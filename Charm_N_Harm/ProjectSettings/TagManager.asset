@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Weapon
+  - TimerTextTag
+  - EnemyCounterTextTag
   layers:
   - Default
   - TransparentFX

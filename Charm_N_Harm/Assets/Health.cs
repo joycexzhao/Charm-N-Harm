@@ -1,3 +1,4 @@
+//Test
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -29,11 +30,12 @@ public class Health : MonoBehaviour
 
     public void GetHit(int amount, GameObject sender)
     {
-        if (isDead)
+        if (isDead) // Check if the enemy is already dead
         {
-            return;
+            return; // If so, don't proceed further.
         }
-        if (sender.layer == gameObject.layer)
+
+        if (sender.layer == gameObject.layer) // Additional check to ignore hits from the same layer (e.g., enemies not hitting each other)
         {
             return;
         }
@@ -47,31 +49,27 @@ public class Health : MonoBehaviour
         }
         else
         {
-            if (!isDead)
+            if (!isDead) // Check again to be extra cautious, though it's technically redundant due to the early return at the beginning
             {
-                //OnDeathWithReference?.Invoke(sender);
-                //isDead = true;
-                //// Notify the Enemy script instead of destroying the GameObject
-                //GetComponent<Enemy>().SetToIdle();
+                isDead = true; // Mark as dead to prevent further actions after death
 
-                // Attempt to get the Enemy component
                 var enemyComponent = GetComponent<Enemy>();
                 if (enemyComponent != null)
                 {
-                    // This will now set the enemy to dead instead of idle
-                    enemyComponent.SetToIdle(); // Assuming SetToDead() is a method you have or will implement
+                    enemyComponent.SetToIdle(); // Or any method that indicates death
+                    EnemyManager.Instance.EnemyKilled();
                 }
                 else
                 {
-                    // Attempt to get the Long_Enemy component
                     var longEnemyComponent = GetComponent<Long_Enemy>();
                     if (longEnemyComponent != null)
                     {
-                        // Assuming Long_Enemy also has a SetToDead method or similar mechanism
-                        longEnemyComponent.SetToIdle();
+                        longEnemyComponent.SetToIdle(); // Or any method that indicates death
+                        EnemyManager.Instance.EnemyKilled();
                     }
                 }
             }
         }
     }
+
 }
