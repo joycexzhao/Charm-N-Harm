@@ -60,20 +60,13 @@ public class Long_Enemy : MonoBehaviour
         if (!isIdle)
         {
             Vector2 pos = transform.position;
-            Vector2 right = transform.right * 1.45f;
-            pos = pos + right;
+            //Vector2 right = transform.right * 1.45f;
+            //pos = pos + right;
 
             GameObject rockObj = Instantiate(rock, pos, Quaternion.identity);
+            Physics2D.IgnoreCollision(rockObj.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
         }
         
-        //Rigidbody2D rockRb = rockObj.GetComponent<Rigidbody2D>();
-        //Vector2 directionToPlayer = (playerTransform.position - transform.position).normalized;
-
-        ////rockRb.velocity = (directionToPlayer * rockSpeed);
-        //Debug.Log(rockRb.velocity);
-        ////rockRb.velocity = new Vector2(1, 1) * rockSpeed;
-        //rockRb.AddForce(new Vector2(1, 1) * rockSpeed);
-        //Debug.Log(rockRb.velocity);
     }
 
 
