@@ -1,4 +1,5 @@
 using System.Collections;
+//using System.Diagnostics;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -63,9 +64,15 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.GetContact(0).collider);
+
         if (isIdle) return; // Prevent interaction if idle
 
-        if (collision.gameObject.CompareTag("Player"))
+        if(collision.GetContact(0).collider.name == "Shield")
+        {
+            isCollidingWithPlayer = false;
+        }
+        else if (collision.gameObject.CompareTag("Player"))
         {
             isCollidingWithPlayer = true;
         }

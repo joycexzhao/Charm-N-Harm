@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+//using System.Diagnostics;
 
 public class Player : MonoBehaviour
 {
@@ -16,11 +17,13 @@ public class Player : MonoBehaviour
     private Coroutine damageCoroutine;
     private UnityEngine.UI.Image healthFillImage;
     private WeaponParent weaponParent;
+    private WeaponScript weaponScript;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         weaponParent = GetComponentInChildren<WeaponParent>();
+        weaponScript = GetComponentInChildren<WeaponScript>();
 
         healthBarSlider.maxValue = health;
         healthBarSlider.value = health;
@@ -37,7 +40,7 @@ public class Player : MonoBehaviour
         pointerInput = GetPointerInput();
         weaponParent.PointerPosition = pointerInput;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && weaponScript.currentWeaponIndex == 0)
         {
             weaponParent.Attack();
         }
@@ -64,19 +67,24 @@ public class Player : MonoBehaviour
         //        damageCoroutine = StartCoroutine(DamageOverTime());
         //    }
         //}
-        if (collision.gameObject.CompareTag("Enemy"))
+        Debug.Log(collision.GetContact(0).collider.name);
+        if (collision.GetContact(0).otherCollider.name != "Shield")
         {
-            var enemy = collision.gameObject.GetComponent<Enemy>();
-            var rock = collision.gameObject.GetComponent<Rock>();
-            var longEnemy = collision.gameObject.GetComponent<Long_Enemy>();
-
-            bool shouldStartDamageCoroutine = (enemy != null && !enemy.IsIdle) || (rock != null && longEnemy == null);
-
-            if (shouldStartDamageCoroutine && damageCoroutine == null)
+            if (collision.gameObject.CompareTag("Enemy"))
             {
-                damageCoroutine = StartCoroutine(DamageOverTime());
+                var enemy = collision.gameObject.GetComponent<Enemy>();
+                var rock = collision.gameObject.GetComponent<Rock>();
+                var longEnemy = collision.gameObject.GetComponent<Long_Enemy>();
+
+                bool shouldStartDamageCoroutine = (enemy != null && !enemy.IsIdle) || (rock != null && longEnemy == null);
+
+                if (shouldStartDamageCoroutine && damageCoroutine == null)
+                {
+                    damageCoroutine = StartCoroutine(DamageOverTime());
+                }
             }
         }
+
     }
 
     void OnCollisionExit2D(Collision2D collision)

@@ -8,6 +8,7 @@ TagManager:
   - Weapon
   - TimerTextTag
   - EnemyCounterTextTag
+  - Shield
   layers:
   - Default
   - TransparentFX

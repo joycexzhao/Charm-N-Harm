@@ -8,8 +8,9 @@ public class WeaponParent : MonoBehaviour
     public Vector2 PointerPosition { get; set; }
 
     public Animator animator;
+    //public Animator animator2;
     public float delay = 0.3f;
-    private bool attackBlocked;
+    public bool attackBlocked;
 
     public bool IsAttacking { get; private set; }
 
@@ -48,6 +49,7 @@ public class WeaponParent : MonoBehaviour
             return;
         }
         animator.SetTrigger("Attack");
+        //animator2.SetTrigger("Attack");
         IsAttacking = true;
         attackBlocked = true;
         StartCoroutine(DelayAttack());
