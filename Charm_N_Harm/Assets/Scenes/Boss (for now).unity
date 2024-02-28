@@ -1660,6 +1660,8 @@ MonoBehaviour:
       m_Calls: []
   isDead: 0
   slider: {fileID: 725704171}
+  heartPrefab: {fileID: 5819883481786955430, guid: 0b9d21056a54c45ceb4fbe77609e66ac, type: 3}
+  heartOffset: {x: 0, y: 4, z: 0}
 --- !u!50 &545588214
 Rigidbody2D:
   serializedVersion: 4
@@ -10219,6 +10221,8 @@ MonoBehaviour:
       m_Calls: []
   isDead: 0
   slider: {fileID: 0}
+  heartPrefab: {fileID: 0}
+  heartOffset: {x: 0, y: 1, z: 0}
 --- !u!1 &2015237008
 GameObject:
   m_ObjectHideFlags: 0
@@ -10501,6 +10505,8 @@ MonoBehaviour:
       m_Calls: []
   isDead: 0
   slider: {fileID: 0}
+  heartPrefab: {fileID: 0}
+  heartOffset: {x: 0, y: 1, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

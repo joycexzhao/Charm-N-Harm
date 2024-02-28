@@ -12794,6 +12794,8 @@ MonoBehaviour:
       m_Calls: []
   isDead: 0
   slider: {fileID: 0}
+  heartPrefab: {fileID: 0}
+  heartOffset: {x: 0, y: 1, z: 0}
 --- !u!1001 &2005133984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12818,6 +12820,14 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 588326125}
+    - target: {fileID: 6936013063181147307, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
+      propertyPath: heartPrefab
+      value: 
+      objectReference: {fileID: 5819883481786955430, guid: 0b9d21056a54c45ceb4fbe77609e66ac, type: 3}
+    - target: {fileID: 6936013063181147307, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
+      propertyPath: heartOffset.y
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6936013063181147307, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
       propertyPath: OnHitWithReference.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -13186,6 +13196,8 @@ MonoBehaviour:
       m_Calls: []
   isDead: 0
   slider: {fileID: 1284954920}
+  heartPrefab: {fileID: 5819883481786955430, guid: 0b9d21056a54c45ceb4fbe77609e66ac, type: 3}
+  heartOffset: {x: 0, y: 1.6, z: 0}
 --- !u!114 &2050091446 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3145775415585353817, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}

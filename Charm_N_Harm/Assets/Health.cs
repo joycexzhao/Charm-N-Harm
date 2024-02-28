@@ -13,11 +13,20 @@ public class Health : MonoBehaviour
     [SerializeField]
     private bool isDead = false;
 
-    [SerializeField] 
+    [SerializeField]
     private Slider slider;
 
+    // Reference to the heart prefab
+    [SerializeField]
+    private GameObject heartPrefab;
+
+    // Offset for the heart to appear above the enemy
+    [SerializeField]
+    private Vector3 heartOffset = new Vector3(0, 1, 0);
+
+
     public void UpdateHealthBar(float currentValue, float maxValue)
-    {   
+    {
         slider.value = currentValue / maxValue;
     }
 
@@ -52,7 +61,7 @@ public class Health : MonoBehaviour
             if (!isDead) // Check again to be extra cautious, though it's technically redundant due to the early return at the beginning
             {
                 isDead = true; // Mark as dead to prevent further actions after death
-
+                Instantiate(heartPrefab, transform.position + heartOffset, Quaternion.identity);
                 var enemyComponent = GetComponent<Enemy>();
                 var longEnemyComponent = GetComponent<Long_Enemy>();
                 var boss = GetComponent<Boss>();
