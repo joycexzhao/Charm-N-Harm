@@ -75,8 +75,9 @@ public class Player : MonoBehaviour
                 var enemy = collision.gameObject.GetComponent<Enemy>();
                 var rock = collision.gameObject.GetComponent<Rock>();
                 var longEnemy = collision.gameObject.GetComponent<Long_Enemy>();
+                var boss = collision.gameObject.GetComponent<Boss>();
 
-                bool shouldStartDamageCoroutine = (enemy != null && !enemy.IsIdle) || (rock != null && longEnemy == null);
+                bool shouldStartDamageCoroutine = (enemy != null && !enemy.IsIdle) || (rock != null && longEnemy == null) || (boss != null && !boss.IsIdle);
 
                 if (shouldStartDamageCoroutine && damageCoroutine == null)
                 {

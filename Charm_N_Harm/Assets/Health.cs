@@ -54,19 +54,23 @@ public class Health : MonoBehaviour
                 isDead = true; // Mark as dead to prevent further actions after death
 
                 var enemyComponent = GetComponent<Enemy>();
+                var longEnemyComponent = GetComponent<Long_Enemy>();
+                var boss = GetComponent<Boss>();
                 if (enemyComponent != null)
                 {
                     enemyComponent.SetToIdle(); // Or any method that indicates death
                     EnemyManager.Instance.EnemyKilled();
                 }
-                else
+                else if (longEnemyComponent)
                 {
-                    var longEnemyComponent = GetComponent<Long_Enemy>();
-                    if (longEnemyComponent != null)
-                    {
-                        longEnemyComponent.SetToIdle(); // Or any method that indicates death
-                        EnemyManager.Instance.EnemyKilled();
-                    }
+                    longEnemyComponent.SetToIdle(); // Or any method that indicates death
+                    EnemyManager.Instance.EnemyKilled();
+
+                }
+                else if (boss)
+                {
+                    boss.SetToIdle();
+                    EnemyManager.Instance.EnemyKilled();
                 }
             }
         }

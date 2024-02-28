@@ -9,7 +9,7 @@ public class Long_Enemy : MonoBehaviour
     public float chaseSpeed = 0.5f;
     public float directionChangeInterval = 3f;
     public float chaseDistance = 5f; // Distance at which the enemy starts chasing the player
-    public Transform playerTransform;
+    private Transform playerTransform;
     public bool IsIdle => isIdle;
     private Rigidbody2D rb;
     private Vector2 movementDirection;
@@ -17,6 +17,9 @@ public class Long_Enemy : MonoBehaviour
     private bool isChasing = false;
     private bool isCollidingWithPlayer = false; // Flag for collision with player
     private bool isIdle = false; // Flag for idle state
+
+    // sprite renderer
+    SpriteRenderer spriteRenderer;
 
     // enemy health bar
     private GameObject healthBar;
@@ -27,9 +30,14 @@ public class Long_Enemy : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(ChangeDirection());
 
         InvokeRepeating("FireRock", 2.0f, 2.0f);
+
+        // find player Transform
+        playerTransform = GameObject.FindWithTag("Player").transform;
 
         // get enemy health bar from hierarchy in scene
         GameObject child = gameObject.transform.GetChild(1).gameObject;
@@ -119,7 +127,7 @@ public class Long_Enemy : MonoBehaviour
         Destroy(healthBar);
 
         // Change the enemy's color to pink
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        
         if (spriteRenderer != null)
         {
             spriteRenderer.color = new Color(.97f, 0.51f, 0.48f, 1f); // Using magenta as a stand-in for really pink

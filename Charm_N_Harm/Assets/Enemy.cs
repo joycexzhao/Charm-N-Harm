@@ -20,10 +20,15 @@ public class Enemy : MonoBehaviour
     // enemy health bar
     private GameObject healthBar;
 
+    // sprite renderer
+    SpriteRenderer spriteRenderer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         StartCoroutine(ChangeDirection());
 
         // get healthBar from hierarchy of scene
@@ -101,7 +106,7 @@ public class Enemy : MonoBehaviour
 
 
         // Change the enemy's color to pink
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        //SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
         {
             spriteRenderer.color = new Color(.97f, 0.51f, 0.48f, 1f); // Using magenta as a stand-in for really pink
