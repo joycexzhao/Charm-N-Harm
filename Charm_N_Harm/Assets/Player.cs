@@ -109,7 +109,8 @@ public class Player : MonoBehaviour
 
             if (health <= 0)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                PlayerDied();
+                // SceneManager.LoadScene("SpawnRoom");
                 yield break;
             }
 
@@ -138,5 +139,10 @@ public class Player : MonoBehaviour
         {
             healthFillImage.color = Color.red;
         }
+    }
+    private void PlayerDied()
+    {
+        LevelManager.instance.GameOver();
+        gameObject.SetActive(false);
     }
 }
