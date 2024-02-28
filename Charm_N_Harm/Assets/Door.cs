@@ -21,7 +21,7 @@ public class Door : MonoBehaviour
     {
         // if player touches door, we check for enemies before entering a new room
         Debug.Log($"Collision detected with {collision.gameObject.name}");
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene().name != "SpawnRoom")
         {
             Debug.Log("Player has collided with the door. Checking for remaining enemies...");
             if (EnemyManager.Instance.EnemyCount == 0) // Check if all enemies are defeated
@@ -34,12 +34,16 @@ public class Door : MonoBehaviour
                 Debug.Log("There are still enemies remaining!");
             }
         }
+        else if (SceneManager.GetActiveScene().name == "SpawnRoom")
+        {
+            Invoke("NewRoom", 0.5f);
+        }
     }
 
 
     private void NewRoom()
     {
-        string[] rooms = new string[3] { "Room1", "Room2", "Room3" };
+        string[] rooms = new string[4] { "SpawnRoom", "Room1", "Room2", "Room3" };
         int current = 0;
         string currentScene = SceneManager.GetActiveScene().name;
         for (int i = 0; i < rooms.Length; i++)
@@ -63,5 +67,6 @@ public class Door : MonoBehaviour
             Debug.Log("No next room to load or attempted to access an index outside the bounds of the array.");
         }
     }
+    
 
 }
