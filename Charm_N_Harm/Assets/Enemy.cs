@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         StartCoroutine(ChangeDirection());
+        playerTransform = FindObjectOfType<Player>().transform;
 
         // get healthBar from hierarchy of scene
         GameObject child = gameObject.transform.GetChild(1).gameObject;

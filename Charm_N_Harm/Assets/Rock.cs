@@ -11,7 +11,6 @@ public class Rock : MonoBehaviour
     public float rockSpeed;
     private float startTime;
 
-    public static Rock instance;
 
     void Start()
     {
