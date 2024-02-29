@@ -140,9 +140,21 @@ public class Player : MonoBehaviour
             healthFillImage.color = Color.red;
         }
     }
+
+    public void KillAll()
+    {
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            Destroy(go);
+        }
+    }
+
     private void PlayerDied()
     {
+        KillAll();
         LevelManager.instance.GameOver();
         gameObject.SetActive(false);
     }
+
+
 }
