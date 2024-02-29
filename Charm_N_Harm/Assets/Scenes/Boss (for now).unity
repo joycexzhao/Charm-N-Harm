@@ -748,6 +748,9 @@ PrefabInstance:
       addedObject: {fileID: 545588209}
     - targetCorrespondingSourceObject: {fileID: 2055102311959635369, guid: dc7e18f63d0fd4717b02ce1979214821, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 545588215}
+    - targetCorrespondingSourceObject: {fileID: 2055102311959635369, guid: dc7e18f63d0fd4717b02ce1979214821, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 545588213}
   m_SourcePrefab: {fileID: 100100000, guid: dc7e18f63d0fd4717b02ce1979214821, type: 3}
 --- !u!1 &239691830
@@ -1100,14 +1103,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337199999}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.633, y: -0.09, z: 0}
-  m_LocalScale: {x: 0.5518216, y: 0.5603399, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.1293148, w: 0.9916036}
+  m_LocalPosition: {x: 0.557, y: -0.149, z: 0}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 506844293}
   m_Father: {fileID: 1558885512}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -14.86}
 --- !u!114 &337200001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,8 +1215,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -9095717837082945937, guid: 9428f67a20bca1d4687a6e8f6dd2e72d, type: 3}
-  m_Color: {r: 0.8925978, g: 0.48584908, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 84361b735ce51194e90396a2726e6ebb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1654,7 +1657,19 @@ MonoBehaviour:
   maxHealth: 20
   OnHitWithReference:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 545588215}
+        m_TargetAssemblyTypeName: EnemyFlash, Assembly-CSharp
+        m_MethodName: Flash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeathWithReference:
     m_PersistentCalls:
       m_Calls: []
@@ -1689,6 +1704,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &545588215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545588208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e441ed0fb2ba4446a2a21865ea62f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.5
 --- !u!114 &562221465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1873,8 +1901,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7482667652216324306, guid: a99ca3c72af63c44fb797de1b190a034, type: 3}
-  m_Color: {r: 0.48627448, g: 0.61310786, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e2b52122eb93b7e4db228b38d34bdce9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1920,7 +1948,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

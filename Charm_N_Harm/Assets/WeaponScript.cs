@@ -35,7 +35,8 @@ public class WeaponScript : MonoBehaviour
     {
         if (weaponHolder.GetComponentInParent<WeaponParent>().attackBlocked == false)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 //next weapon
                 if (currentWeaponIndex < totalWeapons - 1)
@@ -47,7 +48,7 @@ public class WeaponScript : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyUp(KeyCode.LeftShift))
             {
                 //prev weapon
                 if (currentWeaponIndex > 0)
@@ -59,6 +60,6 @@ public class WeaponScript : MonoBehaviour
                 }
             }
         }
-        
+
     }
 }
