@@ -154,6 +154,7 @@ public class Player : MonoBehaviour
         KillAll();
         LevelManager.instance.GameOver();
         gameObject.SetActive(false);
+        ScoreManager.instance.PlayerDied();
     }
 
 

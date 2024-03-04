@@ -9,6 +9,7 @@ TagManager:
   - TimerTextTag
   - EnemyCounterTextTag
   - Shield
+  - Score
   layers:
   - Default
   - TransparentFX

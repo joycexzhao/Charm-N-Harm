@@ -6,8 +6,11 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject deathScreen;
 
-    public void ToggleDeathScreen ()
+    public void ToggleDeathScreen()
     {
         deathScreen.SetActive(!deathScreen.activeSelf);
+
+        // Toggle the timer's activity based on the deathScreen's active state
+        TimeManager.instance.ToggleTimer(!deathScreen.activeSelf);
     }
 }

@@ -80,6 +80,7 @@ public class Health : MonoBehaviour
                 {
                     boss.SetToIdle();
                     EnemyManager.Instance.EnemyKilled();
+                    ScoreManager.instance.PlayerBeatBoss();
                 }
             }
         }

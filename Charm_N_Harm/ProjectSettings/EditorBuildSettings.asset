@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Room2.unity
-    guid: 5cd66f54933124236a3bed7be52a101d
+    path: Assets/Scenes/SpawnRoom.unity
+    guid: a9b0b1f71bb3a485a890afc0927d9a4d
   - enabled: 1
     path: Assets/Scenes/Room1.unity
     guid: 219acf274a10f450889ed1b9d2538285
   - enabled: 1
+    path: Assets/Scenes/Room2.unity
+    guid: 5cd66f54933124236a3bed7be52a101d
+  - enabled: 1
     path: Assets/Scenes/Room3.unity
     guid: aa94c3e575f0c425b8d11d084b5dfbf7
+  - enabled: 1
+    path: Assets/Scenes/Boss.unity
+    guid: 7149734a9ad98437e9a89eee53bd6996
   m_configObjects: {}
