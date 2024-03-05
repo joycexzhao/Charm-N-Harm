@@ -62,4 +62,11 @@ public class TimeManager : MonoBehaviour
             timerText.gameObject.SetActive(v);
         }
     }
+
+    public void ResetTimer()
+    {
+        time = 0f; // Reset the time variable
+                   // If you want to reset the timer text immediately, you can do it here as well:
+        timerText.text = "Time: 00:00.00";
+    }
 }

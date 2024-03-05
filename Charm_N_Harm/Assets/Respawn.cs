@@ -17,6 +17,7 @@ public class Respawn : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             Debug.Log("space key was pressed");
+            TimeManager.instance.ResetTimer(); // Reset the timer
             SceneManager.LoadScene("SpawnRoom");
         }
 
