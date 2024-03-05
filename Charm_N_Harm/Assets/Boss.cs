@@ -172,6 +172,7 @@ public class Boss : MonoBehaviour
         if (tilemap.HasTile(cellPosition))
         {
             Instantiate(enemy, pos_right, Quaternion.identity);
+            EnemyManager.Instance.enemyCount++; // Directly increment the count
         }
         else
         {
@@ -186,6 +187,7 @@ public class Boss : MonoBehaviour
         if (tilemap.HasTile(again))
         {
             Instantiate(enemy, pos_left, Quaternion.identity);
+            EnemyManager.Instance.enemyCount++; // Directly increment the count
         }
         else
         {

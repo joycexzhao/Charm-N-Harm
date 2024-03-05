@@ -6,12 +6,12 @@ public class EnemyManager : MonoBehaviour
 {
     public static EnemyManager Instance; // Singleton instance
     private TextMeshProUGUI enemyCountText; // Reference to the TextMeshProUGUI component
-    private int enemyCount;
+    public int enemyCount;
 
     public int EnemyCount // Public property to access the enemy count
     {
         get { return enemyCount; }
-        private set
+        set
         {
             enemyCount = value;
             UpdateEnemyCountText(); // Update the UI whenever the count changes
