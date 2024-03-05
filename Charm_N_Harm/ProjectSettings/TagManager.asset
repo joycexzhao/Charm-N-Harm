@@ -10,6 +10,7 @@ TagManager:
   - EnemyCounterTextTag
   - Shield
   - Score
+  - Boss
   layers:
   - Default
   - TransparentFX
