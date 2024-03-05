@@ -566,7 +566,6 @@ MonoBehaviour:
   chaseSpeed: 0.5
   directionChangeInterval: 3
   chaseDistance: 5
-  playerTransform: {fileID: 0}
   rock: {fileID: 132436951936209448, guid: 5a5c349a3e68e4a7fb5fd1857993e43c, type: 3}
   rockSpeed: 20
 --- !u!114 &8660891165440307376
@@ -615,6 +614,8 @@ MonoBehaviour:
       m_Calls: []
   isDead: 0
   slider: {fileID: 2383491803022432655}
+  heartPrefab: {fileID: 5819883481786955430, guid: 0b9d21056a54c45ceb4fbe77609e66ac, type: 3}
+  heartOffset: {x: 0, y: 1, z: 0}
 --- !u!114 &2098202078866749929
 MonoBehaviour:
   m_ObjectHideFlags: 0
