@@ -127,7 +127,7 @@ public class Long_Enemy : MonoBehaviour
         Destroy(healthBar);
 
         // Change the enemy's color to pink
-        
+        GetComponent<EnemyFlash>().StopCoroutine(GetComponent<EnemyFlash>().flashCoroutine); //If enemy is flashing, stop flash
         if (spriteRenderer != null)
         {
             spriteRenderer.color = new Color(.97f, 0.51f, 0.48f, 1f); // Using magenta as a stand-in for really pink

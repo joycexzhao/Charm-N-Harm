@@ -235,6 +235,7 @@ public class Boss : MonoBehaviour
         Destroy(healthBar);
 
         // Change the enemy's color to pink
+        GetComponent<EnemyFlash>().StopCoroutine(GetComponent<EnemyFlash>().flashCoroutine); //If enemy is flashing, stop flash
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
         {
