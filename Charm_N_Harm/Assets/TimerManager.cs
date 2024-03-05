@@ -27,7 +27,12 @@ public class TimeManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Attempt to find the TimerText UI element in the new scene
-        timerText = GameObject.FindWithTag("TimerTextTag").GetComponent<TextMeshProUGUI>();
+
+        if (SceneManager.GetActiveScene().name != "SpawnRoom")
+        {
+            timerText = GameObject.FindWithTag("TimerTextTag").GetComponent<TextMeshProUGUI>();
+        }
+       
     }
 
     void Update()

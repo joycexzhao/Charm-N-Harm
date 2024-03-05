@@ -7,8 +7,9 @@ public class StateManager : MonoBehaviour
 {
     public void LoadSpawnRoom()
     {
+        Debug.Log("fuck");
         SceneManager.LoadScene("SpawnRoom");
-        // Debug.Log("fuck");
         
+
     }
 }

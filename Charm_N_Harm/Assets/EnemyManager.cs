@@ -34,9 +34,12 @@ public class EnemyManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Attempt to find the enemy counter UI element in the new scene
-        enemyCountText = GameObject.FindWithTag("EnemyCounterTextTag").GetComponent<TextMeshProUGUI>();
-        RefreshEnemyCount(); // Recalculate and update the enemy count for the new scene
+        if (SceneManager.GetActiveScene().name != "SpawnRoom")
+        {
+            // Attempt to find the enemy counter UI element in the new scene
+            enemyCountText = GameObject.FindWithTag("EnemyCounterTextTag").GetComponent<TextMeshProUGUI>();
+            RefreshEnemyCount(); // Recalculate and update the enemy count for the new scene
+        }
     }
 
     public void RefreshEnemyCount()
