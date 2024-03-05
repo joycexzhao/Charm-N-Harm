@@ -57,6 +57,7 @@ public class EnemyManager : MonoBehaviour
             return;
         }
         enemyCountText.text = $"Enemies Left: {EnemyCount}";
+        Debug.Log(EnemyCount);
     }
 
     public void EnemyKilled()

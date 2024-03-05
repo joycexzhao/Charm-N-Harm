@@ -27,17 +27,24 @@ public class Long_Enemy : MonoBehaviour
     public GameObject rock;
     public float rockSpeed = 20f;
 
+    // shoot radius
+    private float shootRadius = 5.0f;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        StartCoroutine(ChangeDirection());
-
-        InvokeRepeating("FireRock", 2.0f, 2.0f);
-
         // find player Transform
         playerTransform = GameObject.FindWithTag("Player").transform;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        StartCoroutine(ChangeDirection());
+
+        //InvokeRepeating("FireRock", 2.0f, 2.0f);
+        StartCoroutine(FireRock());
+
 
         // get enemy health bar from hierarchy in scene
         GameObject child = gameObject.transform.GetChild(1).gameObject;
@@ -51,11 +58,13 @@ public class Long_Enemy : MonoBehaviour
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
         isChasing = distanceToPlayer <= chaseDistance && !isCollidingWithPlayer;
 
+
         if (isChasing)
         {
             Vector2 directionToPlayer = (playerTransform.position - transform.position).normalized;
             rb.MovePosition(rb.position + directionToPlayer * chaseSpeed * Time.fixedDeltaTime);
         }
+
         else if (!isCollidingWithPlayer)
         {
             rb.MovePosition(rb.position + movementPerSecond * Time.fixedDeltaTime);
@@ -63,19 +72,28 @@ public class Long_Enemy : MonoBehaviour
 
     }
 
-    void FireRock()
+    IEnumerator FireRock()
     {
-        if (!isIdle)
+        while (true) 
         {
-            Vector2 pos = transform.position;
-            //Vector2 right = transform.right * 1.45f;
-            //pos = pos + right;
+            float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 
-            GameObject rockObj = Instantiate(rock, pos, Quaternion.identity);
-            Physics2D.IgnoreCollision(rockObj.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
+            //Debug.Log("distance: " + distanceToPlayer);
+            if (distanceToPlayer <= shootRadius && !isIdle)
+            {
+                GameObject rockObj = Instantiate(rock, transform.position, Quaternion.identity);
+                Physics2D.IgnoreCollision(rockObj.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
+                yield return new WaitForSeconds(2.0f);
+            }
+            else
+            {
+                // If the player is outside the shoot radius or the enemy is idle, just wait for a short period
+                // before checking again, to avoid unnecessary calculations every frame.
+                yield return new WaitForSeconds(0.1f);
+            }
         }
-        
     }
+
 
 
     private IEnumerator ChangeDirection()

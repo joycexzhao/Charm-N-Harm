@@ -37,6 +37,8 @@ public class Boss : MonoBehaviour
 
     private bool isDashing;
 
+    private EnemyManager em;
+
     // tilemap, used for checking if enemy is spawning on our tilemap or not
     public Tilemap tilemap;
 
@@ -54,6 +56,9 @@ public class Boss : MonoBehaviour
 
         // trying to prevent boss from easily tipping over
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        // get enemy manager script
+        em = FindObjectOfType<EnemyManager>();
     }
 
     void FixedUpdate()
@@ -171,8 +176,9 @@ public class Boss : MonoBehaviour
         Vector3Int cellPosition = tilemap.WorldToCell(pos_right);
         if (tilemap.HasTile(cellPosition))
         {
+            EnemyManager.Instance.enemyCount++;
             Instantiate(enemy, pos_right, Quaternion.identity);
-            EnemyManager.Instance.enemyCount++; // Directly increment the count
+            
         }
         else
         {
@@ -186,15 +192,16 @@ public class Boss : MonoBehaviour
         Vector3Int again = tilemap.WorldToCell(pos_left);
         if (tilemap.HasTile(again))
         {
+            EnemyManager.Instance.enemyCount++;
             Instantiate(enemy, pos_left, Quaternion.identity);
-            EnemyManager.Instance.enemyCount++; // Directly increment the count
+            
         }
         else
         {
             yield return new WaitForSeconds(spawnInterval);
         }
         //Instantiate(enemy, pos_left, Quaternion.identity);
-
+        em.RefreshEnemyCount();
         yield return new WaitForSeconds(spawnInterval); // Wait for a few seconds before spawning again
         
     }
