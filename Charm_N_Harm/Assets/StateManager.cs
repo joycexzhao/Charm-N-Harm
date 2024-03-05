@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class StateManager : MonoBehaviour
 {
-    public void ChangeSceenByName(string name)
+    public void LoadSpawnRoom()
     {
-        if (name != null)
-        {
-            SceneManager.LoadScene(name);
-        }
+        SceneManager.LoadScene("SpawnRoom");
+        // Debug.Log("fuck");
         
     }
 }

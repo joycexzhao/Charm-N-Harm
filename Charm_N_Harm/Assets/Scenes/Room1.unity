@@ -11162,7 +11162,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 200207154}
         m_TargetAssemblyTypeName: StateManager, Assembly-CSharp
-        m_MethodName: ChangeSceenByName
+        m_MethodName: ChangeSceneByName
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11171,7 +11171,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: SpawnRoom
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!114 &1949901393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11888,7 +11888,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 200207153}
   - {fileID: 345354564}
   - {fileID: 1442283473}
   - {fileID: 1966800500}
@@ -11900,3 +11899,4 @@ SceneRoots:
   - {fileID: 1141400098}
   - {fileID: 394540587}
   - {fileID: 1084551324}
+  - {fileID: 200207153}
