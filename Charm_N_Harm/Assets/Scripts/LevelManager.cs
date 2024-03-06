@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,8 +11,26 @@ public class LevelManager : MonoBehaviour
     public GameObject winMusic;
     public GameObject loseMusic;
 
+    private AudioSource[] allAudioSources;
+
+    void StopAllAudio()
+    {
+        allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+        foreach (AudioSource audioS in allAudioSources)
+        {
+            audioS.Stop();
+        }
+    }
+
     private void Awake()
     {
+        
+        if (SceneManager.GetActiveScene().name == "Room1")
+        {
+            music = GameObject.FindWithTag("bgm");
+            music.GetComponent<AudioSource>().Play();
+        }
+        //music.GetComponent<AudioSource>().Play();
         if (LevelManager.instance == null)
         {
             instance = this;
@@ -27,7 +46,8 @@ public class LevelManager : MonoBehaviour
         UIManager _ui = GetComponent<UIManager>();
         if (_ui != null)
         {
-            music.GetComponent<AudioSource>().Pause();
+            StopAllAudio();
+            //music.GetComponent<AudioSource>().Pause();
             loseMusic.GetComponent<AudioSource>().Play();
             _ui.ToggleDeathScreen();
             
