@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     [SerializeField]
+
     private int currentHealth, maxHealth;
 
     public UnityEvent<GameObject> OnHitWithReference, OnDeathWithReference;
@@ -90,7 +91,8 @@ public class Health : MonoBehaviour
                     player.gameObject.SetActive(false);
                     KillAll();
                     LevelManager.instance.GameWin();
-                    
+                    LevelManager.instance.gameActive = false;
+
                     //boss.SetToIdle();
                     EnemyManager.Instance.KilledAll();
                     ScoreManager.instance.PlayerBeatBoss();

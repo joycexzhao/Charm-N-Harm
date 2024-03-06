@@ -1568,6 +1568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 1882165690}
+  winScreen: {fileID: 0}
 --- !u!114 &299098816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3145,8 +3146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb24d972ed88544588302ad296d2ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 5
-  maxHealth: 5
   OnHitWithReference:
     m_PersistentCalls:
       m_Calls:
@@ -3181,6 +3180,7 @@ MonoBehaviour:
   slider: {fileID: 1695950118}
   heartPrefab: {fileID: 5819883481786955430, guid: 0b9d21056a54c45ceb4fbe77609e66ac, type: 3}
   heartOffset: {x: 0, y: 1.6, z: 0}
+  gameOver: 0
 --- !u!114 &879353444 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3145775415585353817, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
@@ -3277,8 +3277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb24d972ed88544588302ad296d2ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 5
-  maxHealth: 5
   OnHitWithReference:
     m_PersistentCalls:
       m_Calls:
@@ -3313,6 +3311,7 @@ MonoBehaviour:
   slider: {fileID: 1690002855}
   heartPrefab: {fileID: 5819883481786955430, guid: 0b9d21056a54c45ceb4fbe77609e66ac, type: 3}
   heartOffset: {x: 0, y: 1.6, z: 0}
+  gameOver: 0
 --- !u!114 &955634256 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3145775415585353817, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
@@ -9836,8 +9835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb24d972ed88544588302ad296d2ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 5
-  maxHealth: 5
   OnHitWithReference:
     m_PersistentCalls:
       m_Calls:
@@ -9872,6 +9869,7 @@ MonoBehaviour:
   slider: {fileID: 623888925}
   heartPrefab: {fileID: 5819883481786955430, guid: 0b9d21056a54c45ceb4fbe77609e66ac, type: 3}
   heartOffset: {x: 0, y: 1.6, z: 0}
+  gameOver: 0
 --- !u!114 &1530427409 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3145775415585353817, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
@@ -10398,6 +10396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769e2b01254174b5ea3486d11ba6f6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyCount: 0
 --- !u!4 &1584185422
 Transform:
   m_ObjectHideFlags: 0
@@ -15192,8 +15191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb24d972ed88544588302ad296d2ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 2
-  maxHealth: 2
   OnHitWithReference:
     m_PersistentCalls:
       m_Calls: []
@@ -15204,6 +15201,7 @@ MonoBehaviour:
   slider: {fileID: 0}
   heartPrefab: {fileID: 0}
   heartOffset: {x: 0, y: 1, z: 0}
+  gameOver: 0
 --- !u!1001 &2005133984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15578,8 +15576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb24d972ed88544588302ad296d2ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 5
-  maxHealth: 5
   OnHitWithReference:
     m_PersistentCalls:
       m_Calls:
@@ -15614,6 +15610,7 @@ MonoBehaviour:
   slider: {fileID: 1284954920}
   heartPrefab: {fileID: 5819883481786955430, guid: 0b9d21056a54c45ceb4fbe77609e66ac, type: 3}
   heartOffset: {x: 0, y: 1.6, z: 0}
+  gameOver: 0
 --- !u!114 &2050091446 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3145775415585353817, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}

@@ -39,13 +39,19 @@ public class TimeManager : MonoBehaviour
     {
         if (timerText == null) return; // Don't proceed if timerText hasn't been found
 
-        time += Time.deltaTime; // Increment the timer based on the delta time between frames
-        int minutes = Mathf.FloorToInt(time / 60F);
-        int seconds = Mathf.FloorToInt(time % 60F);
-        int milliseconds = Mathf.FloorToInt((time % 1) * 100); // Adjusted for two digits of milliseconds
+        if (LevelManager.instance.gameActive == true)
+        {
+            time += Time.deltaTime; // Increment the timer based on the delta time between frames
+            int minutes = Mathf.FloorToInt(time / 60F);
+            int seconds = Mathf.FloorToInt(time % 60F);
+            int milliseconds = Mathf.FloorToInt((time % 1) * 100); // Adjusted for two digits of milliseconds
 
-        // Update the UI text to include two digits for milliseconds
-        timerText.text = string.Format("Time: {0:00}:{1:00}.{2:00}", minutes, seconds, milliseconds);
+            // Update the UI text to include two digits for milliseconds
+            timerText.text = string.Format("Time: {0:00}:{1:00}.{2:00}", minutes, seconds, milliseconds);
+        }
+        
+        
+        
     }
 
 

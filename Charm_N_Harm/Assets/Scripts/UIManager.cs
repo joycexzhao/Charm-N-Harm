@@ -20,6 +20,6 @@ public class UIManager : MonoBehaviour
         winScreen.SetActive(!winScreen.activeSelf);
 
         // Toggle the timer's activity based on the winScreen's active state
-        TimeManager.instance.ToggleTimer(!winScreen.activeSelf);
+        //TimeManager.instance.ToggleTimer(!winScreen.activeSelf);
     }
 }
