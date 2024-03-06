@@ -6,6 +6,8 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     public bool gameActive = true;
+    public GameObject music;
+    public GameObject winMusic;
 
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class LevelManager : MonoBehaviour
         if (_ui != null)
         {
             _ui.ToggleDeathScreen();
+            
         }
 
     }
@@ -35,6 +38,8 @@ public class LevelManager : MonoBehaviour
         if (_ui != null)
         {
             _ui.ToggleWinScreen();
+            music.GetComponent<AudioSource>().Pause();
+            winMusic.GetComponent<AudioSource>().Play();
         }
 
     }

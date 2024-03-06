@@ -8,6 +8,14 @@ public class EnemyManager : MonoBehaviour
     private TextMeshProUGUI enemyCountText; // Reference to the TextMeshProUGUI component
     public int enemyCount;
 
+    public GameObject sound1;
+    public GameObject sound2;
+    public GameObject sound3;
+
+    private static GameObject s1;
+    private static GameObject s2;
+    private static GameObject s3;
+
     public int EnemyCount // Public property to access the enemy count
     {
         get { return enemyCount; }
@@ -20,6 +28,9 @@ public class EnemyManager : MonoBehaviour
 
     void Awake()
     {
+        s1 = sound1;
+        s2 = sound2;
+        s3 = sound3;
         if (Instance == null)
         {
             Instance = this;
@@ -63,6 +74,21 @@ public class EnemyManager : MonoBehaviour
     public void EnemyKilled()
     {
         EnemyCount--; // Decrement and update UI through the property
+        //Play Sound
+        int rand = UnityEngine.Random.Range(0, 3);
+        if (rand == 0)
+        {
+            s1.GetComponent<AudioSource>().Play();
+        }
+        else if (rand == 1)
+        {
+            s2.GetComponent<AudioSource>().Play();
+        }
+        else
+        {
+            s3.GetComponent<AudioSource>().Play();
+        }
+
     }
 
     public void KilledAll()

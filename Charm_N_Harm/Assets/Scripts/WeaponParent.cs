@@ -22,6 +22,8 @@ public class WeaponParent : MonoBehaviour
         IsAttacking = false;
     }
 
+    public GameObject hitSound;
+
     private void Update(){
         if (IsAttacking)
         {
@@ -52,6 +54,7 @@ public class WeaponParent : MonoBehaviour
         //animator2.SetTrigger("Attack");
         IsAttacking = true;
         attackBlocked = true;
+        hitSound.GetComponent<AudioSource>().Play();
         StartCoroutine(DelayAttack());
     }
 
