@@ -17,12 +17,14 @@ public class WeaponParent : MonoBehaviour
     public Transform circleOrigin;
     public float radius;
 
+
     public void ResetIsAttacking()
     {
         IsAttacking = false;
     }
 
-    public GameObject hitSound;
+    public GameObject swingSound;
+    public GameObject enemyHit;
 
     private void Update(){
         if (IsAttacking)
@@ -54,7 +56,7 @@ public class WeaponParent : MonoBehaviour
         //animator2.SetTrigger("Attack");
         IsAttacking = true;
         attackBlocked = true;
-        hitSound.GetComponent<AudioSource>().Play();
+        swingSound.GetComponent<AudioSource>().Play();
         StartCoroutine(DelayAttack());
     }
 
@@ -77,6 +79,10 @@ public class WeaponParent : MonoBehaviour
         {
             Debug.Log(collider.name);
             Health health;
+            if (collider.GetComponent<Enemy>() || collider.GetComponent<Long_Enemy>() || collider.GetComponent<Boss>())
+            {
+                enemyHit.GetComponent<AudioSource>().Play();
+            }
             if (health = collider.GetComponent<Health>())
             {
                 health.GetHit(1, transform.parent.gameObject);
