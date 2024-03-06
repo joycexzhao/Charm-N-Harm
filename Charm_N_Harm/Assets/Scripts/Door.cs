@@ -43,7 +43,7 @@ public class Door : MonoBehaviour
 
     private void NewRoom()
     {
-        string[] rooms = new string[5] { "SpawnRoom", "Room1", "Room2", "Room3", "Boss" };
+        string[] rooms = new string[6] { "SpawnRoom", "Room1", "Room2", "Room3", "Room4", "Boss" };
         int current = 0;
         string currentScene = SceneManager.GetActiveScene().name;
         for (int i = 0; i < rooms.Length; i++)

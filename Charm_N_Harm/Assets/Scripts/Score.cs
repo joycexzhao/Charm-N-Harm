@@ -63,7 +63,10 @@ public class ScoreManager : MonoBehaviour
                 AddScore(250);
                 break;
             case "Room3":
-                AddScore(500);
+                AddScore(450);
+                break;
+            case "Room4":
+                AddScore(600);
                 break;
             case "Boss":
                 AddScore(750);
