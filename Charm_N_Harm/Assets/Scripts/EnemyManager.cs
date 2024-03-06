@@ -65,6 +65,11 @@ public class EnemyManager : MonoBehaviour
         EnemyCount--; // Decrement and update UI through the property
     }
 
+    public void KilledAll()
+    {
+        EnemyCount = 0;
+    }
+
     void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded; // Unsubscribe to avoid memory leaks

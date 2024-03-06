@@ -27,4 +27,14 @@ public class LevelManager : MonoBehaviour
         }
 
     }
+
+    public void GameWin()
+    {
+        UIManager _ui = GetComponent<UIManager>();
+        if (_ui != null)
+        {
+            _ui.ToggleWinScreen();
+        }
+
+    }
 }

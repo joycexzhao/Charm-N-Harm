@@ -39,13 +39,13 @@ public class ScoreManager : MonoBehaviour
         // Don't automatically update the UI here either
     }
 
-    public void UpdateDeathScreenScore()
+    public void UpdatePanelScore()
     {
         // This method is called to update the score on the death screen
-        TextMeshProUGUI deathScreenScoreText = GameObject.FindWithTag("Score").GetComponent<TextMeshProUGUI>();
-        if (deathScreenScoreText != null)
+        TextMeshProUGUI panelScoreText = GameObject.FindWithTag("Score").GetComponent<TextMeshProUGUI>();
+        if (panelScoreText != null)
         {
-            deathScreenScoreText.text = $"Score: {score}";
+            panelScoreText.text = $"Score: {score}";
         }
         else
         {
@@ -74,12 +74,13 @@ public class ScoreManager : MonoBehaviour
         }
 
         // Assuming you want to update the death screen score immediately upon death
-        UpdateDeathScreenScore();
+        UpdatePanelScore();
     }
 
     public void PlayerBeatBoss()
     {
         AddScore(1000); // Add score for beating the boss
         // You might want to update a victory screen score or something similar here
+        UpdatePanelScore();
     }
 }

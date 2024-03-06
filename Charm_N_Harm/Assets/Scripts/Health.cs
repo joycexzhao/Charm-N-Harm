@@ -37,6 +37,14 @@ public class Health : MonoBehaviour
         isDead = false;
     }
 
+    public void KillAll()
+    {
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            Destroy(go);
+        }
+    }
+
     public void GetHit(int amount, GameObject sender)
     {
         if (isDead) // Check if the enemy is already dead
@@ -78,9 +86,15 @@ public class Health : MonoBehaviour
                 }
                 else if (boss)
                 {
-                    boss.SetToIdle();
-                    EnemyManager.Instance.EnemyKilled();
+                    var player = FindObjectOfType<Player>();
+                    player.gameObject.SetActive(false);
+                    KillAll();
+                    LevelManager.instance.GameWin();
+                    
+                    //boss.SetToIdle();
+                    EnemyManager.Instance.KilledAll();
                     ScoreManager.instance.PlayerBeatBoss();
+
                 }
             }
         }
