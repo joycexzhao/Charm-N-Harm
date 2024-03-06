@@ -1282,6 +1282,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5761065165009542944, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 736187404}
+    - targetCorrespondingSourceObject: {fileID: 5761065165009542944, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 736187416}
   m_SourcePrefab: {fileID: 100100000, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
 --- !u!1 &200207150
 GameObject:
@@ -1811,6 +1814,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7057001420305143649, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
   m_PrefabInstance: {fileID: 4635525782082564093}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &309951250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309951228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8741539ec0f428c9096d00cf62bf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &314471891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,7 +2860,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10000
   m_Sprite: {fileID: 21300000, guid: 84361b735ce51194e90396a2726e6ebb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2941,6 +2956,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7057001420305143649, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
   m_PrefabInstance: {fileID: 1475896574}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &681708373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681708361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8741539ec0f428c9096d00cf62bf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &683689138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3338,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6915839777300584253, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
   m_PrefabInstance: {fileID: 188074290}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &736187416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736187403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8741539ec0f428c9096d00cf62bf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &737514397
 GameObject:
   m_ObjectHideFlags: 0
@@ -5156,7 +5195,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1869315837
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -32768
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -10336,6 +10375,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1761826540}
     m_Modifications:
+    - target: {fileID: 2055102311959635368, guid: 6a057178eb028e94fb93bf39262ea3e8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10000
+      objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635369, guid: 6a057178eb028e94fb93bf39262ea3e8, type: 3}
       propertyPath: m_Name
       value: PF Props Wooden Gate
@@ -10578,6 +10621,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3139769342099046, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 681708362}
+    - targetCorrespondingSourceObject: {fileID: 3139769342099046, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 681708373}
   m_SourcePrefab: {fileID: 100100000, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
 --- !u!1 &1500111094
 GameObject:
@@ -10825,6 +10871,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5761065165009542944, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2050091453}
+    - targetCorrespondingSourceObject: {fileID: 5761065165009542944, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2050091461}
   m_SourcePrefab: {fileID: 100100000, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
 --- !u!1 &1571026044
 GameObject:
@@ -11674,6 +11723,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5761065165009542944, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1776638820}
+    - targetCorrespondingSourceObject: {fileID: 5761065165009542944, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1776638826}
   m_SourcePrefab: {fileID: 100100000, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
 --- !u!1 &1776638816 stripped
 GameObject:
@@ -11807,6 +11859,18 @@ MonoBehaviour:
   slider: {fileID: 101275878}
   heartPrefab: {fileID: 5819883481786955430, guid: 0b9d21056a54c45ceb4fbe77609e66ac, type: 3}
   heartOffset: {x: 0, y: 1.6, z: 0}
+--- !u!114 &1776638826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776638816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8741539ec0f428c9096d00cf62bf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1788629856
 GameObject:
   m_ObjectHideFlags: 0
@@ -12064,7 +12128,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1869315837
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -30000
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -14165,6 +14229,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5628018141983903107, guid: 776f2a0f39fb44efea2226486425cb89, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5628018141983903116, guid: 776f2a0f39fb44efea2226486425cb89, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -14186,6 +14254,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5628018141983903104, guid: 776f2a0f39fb44efea2226486425cb89, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1966800514}
+    - targetCorrespondingSourceObject: {fileID: 5628018141983903104, guid: 776f2a0f39fb44efea2226486425cb89, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1966800520}
   m_SourcePrefab: {fileID: 100100000, guid: 776f2a0f39fb44efea2226486425cb89, type: 3}
 --- !u!1 &1966800501 stripped
 GameObject:
@@ -14238,6 +14309,18 @@ MonoBehaviour:
   slider: {fileID: 0}
   heartPrefab: {fileID: 0}
   heartOffset: {x: 0, y: 1, z: 0}
+--- !u!114 &1966800520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966800501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8741539ec0f428c9096d00cf62bf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2015237008
 GameObject:
   m_ObjectHideFlags: 0
@@ -14495,6 +14578,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6915839777300584253, guid: 23ebd9389774d4563bfd1723806b9fc0, type: 3}
   m_PrefabInstance: {fileID: 1531734064}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2050091461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050091438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8741539ec0f428c9096d00cf62bf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2092192083
 GameObject:
   m_ObjectHideFlags: 0
@@ -14881,6 +14976,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3139769342099046, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 309951242}
+    - targetCorrespondingSourceObject: {fileID: 3139769342099046, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 309951250}
   m_SourcePrefab: {fileID: 100100000, guid: 0107fdf30428249f78e46b90f1b56e3d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
