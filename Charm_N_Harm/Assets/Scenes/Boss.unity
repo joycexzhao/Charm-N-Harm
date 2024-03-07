@@ -1132,6 +1132,7 @@ GameObject:
   - component: {fileID: 337200003}
   - component: {fileID: 337200002}
   - component: {fileID: 337200001}
+  - component: {fileID: 337200004}
   m_Layer: 20
   m_Name: Weapon
   m_TagString: Untagged
@@ -1270,6 +1271,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &337200004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337199999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887886f651b9d464a82a4c3bbbed85fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &344973368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947911505737750448, guid: 4cb9a836ef7f0449aa528a1fcc399a66, type: 3}
@@ -1973,8 +1986,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb24d972ed88544588302ad296d2ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 20
-  maxHealth: 20
+  currentHealth: 35
+  maxHealth: 35
   OnHitWithReference:
     m_PersistentCalls:
       m_Calls:
@@ -2291,6 +2304,7 @@ GameObject:
   - component: {fileID: 641921381}
   - component: {fileID: 641921384}
   - component: {fileID: 641921385}
+  - component: {fileID: 641921386}
   m_Layer: 20
   m_Name: Shield
   m_TagString: Untagged
@@ -2411,6 +2425,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.1437635, y: 1.1268514}
   m_EdgeRadius: 0
+--- !u!114 &641921386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641921380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887886f651b9d464a82a4c3bbbed85fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &645668399
 GameObject:
   m_ObjectHideFlags: 0

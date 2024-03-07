@@ -140,7 +140,7 @@ public class Long_Enemy : MonoBehaviour
     {
         isIdle = true;
         rb.velocity = Vector2.zero; // Stop any movement immediately
-
+        rb.isKinematic = true;
         // get rid of enemy health bar
         Destroy(healthBar);
 

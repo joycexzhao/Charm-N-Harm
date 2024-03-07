@@ -238,6 +238,7 @@ public class Boss : MonoBehaviour
     {
         isIdle = true;
         rb.velocity = Vector2.zero; // Stop any movement immediately
+        rb.isKinematic = true;
         StopAllCoroutines();
 
         // get rid of enemy health bar

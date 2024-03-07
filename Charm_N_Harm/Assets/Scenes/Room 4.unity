@@ -2612,6 +2612,7 @@ GameObject:
   - component: {fileID: 383916610}
   - component: {fileID: 383916609}
   - component: {fileID: 383916608}
+  - component: {fileID: 383916611}
   m_Layer: 20
   m_Name: Weapon
   m_TagString: Untagged
@@ -2750,6 +2751,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &383916611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383916606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887886f651b9d464a82a4c3bbbed85fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &436041671
 GameObject:
   m_ObjectHideFlags: 0
@@ -15375,6 +15388,7 @@ GameObject:
   - component: {fileID: 1845147746}
   - component: {fileID: 1845147748}
   - component: {fileID: 1845147747}
+  - component: {fileID: 1845147749}
   m_Layer: 20
   m_Name: Shield
   m_TagString: Untagged
@@ -15495,6 +15509,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1845147749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845147745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887886f651b9d464a82a4c3bbbed85fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1851051447
 PrefabInstance:
   m_ObjectHideFlags: 0
