@@ -1242,7 +1242,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &181533066
 GameObject:
@@ -1455,7 +1455,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &239691830
 GameObject:
@@ -3385,7 +3385,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!224 &510785874
 RectTransform:
@@ -3885,7 +3885,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &688036200
 GameObject:
@@ -3987,7 +3987,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &696711338
 GameObject:
@@ -5071,7 +5071,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &1001970741
 GameObject:
@@ -10729,7 +10729,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &1512321383
 GameObject:
@@ -10983,7 +10983,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1001 &1531734064
 PrefabInstance:
@@ -11442,7 +11442,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &1572676548
 GameObject:
@@ -17180,7 +17180,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &2019976651
 GameObject:
@@ -17282,7 +17282,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &2024747481
 GameObject:

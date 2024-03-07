@@ -1799,7 +1799,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &336842339
 GameObject:
@@ -2295,7 +2295,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!224 &510785874
 RectTransform:
@@ -3204,7 +3204,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &736187403 stripped
 GameObject:
@@ -4852,7 +4852,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1 &1219668774
 GameObject:
@@ -11161,7 +11161,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 32767
   m_TargetDisplay: 0
 --- !u!1 &1572676548
 GameObject:
@@ -11607,7 +11607,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30000
   m_TargetDisplay: 0
 --- !u!1001 &1705404485
 PrefabInstance:
